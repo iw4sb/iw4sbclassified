@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+#initial-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+#enter-button {
+    padding: 20px 40px;
+    font-size: 24px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: none;
+    outline: none;
+    border-left-style: none;
+    border-top-style: none;
+}
+
+#enter-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05); 
+}
+
+button {
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none; 
+    outline: none; 
+}
+
+
+/* Hide overlays in first page */
+.vhs-overlay-background,
+.logo-overlay,
+.vhs-overlay,
+.vhs-overlay-2 {
+    display: none;
+}
+
+/* cant get this to work */
+.fisheye-overlay {
+    width: 100vw; 
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+
+.image-gallery {
+    width: 100vw;
+    height: 100vh; 
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.image-container img:first-child {
+    opacity: 1;
+}
+
+.vhs-overlay {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 3;
+    opacity: 0.25; 
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+.vhs-overlay-2 {
+    position: absolute;
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;
+    object-fit: cover;
+    z-index: 3;
+    opacity: 0.5;
+    pointer-events: none;
+    mix-blend-mode: multiply; 
+}
+
+.logo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    opacity: 1;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+.vhs-overlay-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.15;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.25; }
+    20% { opacity: 0.75; }
+    40% { opacity: 0.4; }
+    60% { opacity: 0.7; }
+    80% { opacity: 0.2; }
+    100% { opacity: 0.25; }
+}
+
+.image-container {
+    animation: flicker 1.5s infinite; 
+}
+
+.icon-link {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    transition: transform 0.3s;
+}
+
+.icon-link a {
+    text-decoration: none;
+}
+
+.icon-image {
+    width: 25px;
+    height: auto;
+}
+
+.icon-link:hover {
+    transform: translateX(-50%) scale(1.1); 
+}
+

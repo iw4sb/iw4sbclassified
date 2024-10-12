@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IW4SB.">
+    <title>IW4SB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Initial ENTER SCREEN -->
+    <div id="initial-screen">
+        <div class="centered">
+            <button id="enter-button">Enter?</button>
+        </div>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <!-- Background VHS Overlay -->
+        <video class="vhs-overlay-background" autoplay loop muted>
+            <source src="https://dl.dropboxusercontent.com/scl/fi/jds0svmxacwyhqkv5x8lk/zBonus_03_building-plans.mp4?rlkey=nvcmtecdz6el3t3oz7gg08evh&st=37bfaoij&dl=1" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="fisheye-overlay">
+            <div class="image-gallery">
+                <div class="image-container">
+                    <img src="https://i.ibb.co/4Yn935F/websiteimagejudgement.png" class="fade" alt="Image 1">
+                    <img src="https://i.ibb.co/KLpy7pp/websiteimagecheytac.png" class="fade" alt="Image 2">
+                    <img src="https://i.ibb.co/Y2bvKHg/websiteimagedsr.png" class="fade" alt="Image 3">
+                    <img src="https://i.ibb.co/THBGnTm/websiteimagem4.png" class="fade" alt="Image 4">
+                    <img src="https://i.ibb.co/xSD4nCB/websiteimagekam12.png" class="fade" alt="Image 5">
+                    <img src="https://i.ibb.co/nQp8F4k/websiteimagemk48.png" class="fade" alt="Image 6">
+                    <img src="https://i.ibb.co/6s8WC1g/websiteimageswitchblade.png" class="fade" alt="Image 7">
+                    <img src="https://i.ibb.co/CsY74x0/websiteimageaki.png" class="fade" alt="Image 8">
+                </div>
+            </div>
+        </div>
+
+        <!-- TOP LOGO Overlay -->
+        <video class="logo-overlay" autoplay loop muted>
+            <source src="https://dl.dropboxusercontent.com/scl/fi/arkykbmy06vvnz2wyepok/website-video-logo0001-0500.mp4?rlkey=xosaiy63n5gloxrhmv0t8l6oi&st=6w9h88yq&dl=0" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- VHS TOP LETTERS Overlay -->
+        <video class="vhs-overlay" autoplay loop muted>
+            <source src="https://dl.dropboxusercontent.com/scl/fi/n2wrj44008y01khaw6cli/020-Bonus_TransitionDiods_Screen.mp4?rlkey=pjpd2iv4j7fa0v1bg37061p3o&st=9h5g8lk9&dl=0" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- VHS TOP COLORFUL Overlay -->
+        <video class="vhs-overlay-2" autoplay loop muted>
+            <source src="https://dl.dropboxusercontent.com/scl/fi/tg56ihjatbdry7iqxglar/004-ColorfulTrippin_Multiply.mp4?rlkey=go676d9ozkpd1adnyr50uz7n7&st=hqqhd4lg&dl=0" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Supposed to be a fisheye i cant get to work idk -->
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <radialGradient id="fisheye-gradient" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="white"/>
+                    <stop offset="100%" stop-color="black"/>
+                </radialGradient>
+                <filter id="fisheye-filter">
+                    <feImage result="gradient" xlink:href="#fisheye-gradient" />
+                    <feDisplacementMap in2="gradient" in="SourceGraphic" scale="50" />
+                </filter>
+            </defs>
+        </svg>
+
+        <!-- background music -->
+        <audio id="player" preload="auto">
+            <source src="https://www.dl.dropboxusercontent.com/scl/fi/idfo0jlr4udty05ebw5x0/iw4sbtheme.mp3?rlkey=q75d45s93gufm30ofh0nnfp6m&st=q78k8wf3&dl=0" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        
+        <!-- Icon with Link -->
+        <div class="icon-link">
+            <a href="https://x.com/iw4sb" target="_blank" rel="noopener noreferrer">
+                <img src="https://i.ibb.co/KyWxwMw/x-social-media-black-icon.png" alt="External Link" class="icon-image">
+            </a>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
